@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { memo,useEffect } from 'react'
 import { connect } from 'dva';
 import { Button } from 'antd';
 
@@ -7,9 +7,18 @@ const namespace = 'list'
 
 const List = memo((props) => {
   const { dataList, maxNum,dispatch } = props
+  useEffect(() => {
+    init()
+  }, [])
+  
   const add=()=>{
     dispatch({ //通过dispatch调用model中定义的函数,通过type属性,指定函数命名,格式:namespace+'/函数名'
       type:namespace+'/addNewData'
+    })
+  }
+  const init=()=>{
+    dispatch({ //通过dispatch调用model中定义的函数,通过type属性,指定函数命名,格式:namespace+'/函数名'
+      type:namespace+'/initData'
     })
   }
   return (
