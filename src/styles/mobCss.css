@@ -1,0 +1,43 @@
+html,
+body {
+  font-size: 62.5%;
+}
+.cur {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.text-hidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* 出现弹窗后页面禁止滚动 */
+.hidden {
+  overflow: hidden;
+}
+
+[type="text"] {
+  outline-color: #333;
+}
+/* 输入框 */
+[type="text"]::-webkit-input-placeholder {
+  font-weight: 400;
+  color: #999;
+} /* 使用webkit内核的浏览器 */
+[type="text"]:-moz-placeholder {
+  font-weight: 400;
+  color: #999;
+} /* Firefox版本4-18 */
+[type="text"]::-moz-placeholder {
+  font-weight: 400;
+  color: #999;
+} /* Firefox版本19+ */
+[type="text"]:-ms-input-placeholder {
+  font-weight: 400;
+  color: #999;
+} /* IE浏览器 */
+::placeholder {
+  color: #999;
+  font-weight: 400;
+}

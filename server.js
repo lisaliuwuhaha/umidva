@@ -28,9 +28,9 @@ app.use(async (req, res) => {
     // staticMarkup: false,
 
     // 扩展 getInitialProps 在服务端渲染中的参数
-    getInitialPropsCtx: {
-      req,
-    },
+    // getInitialPropsCtx: {
+    //   req,
+    // },
 
     // manifest，正常情况下不需要
   });
